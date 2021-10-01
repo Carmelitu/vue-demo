@@ -2,7 +2,9 @@ const app = new Vue({
     el: '#app',
     data: {
         message: 'Hello Vue',
-        sum: 3 + 6
+        sum: 3 + 6,
+        isVisible: true,
+        people: ['Paula', 'Lucas', 'Carmelo']
     },
     computed: {
         // a computed getter
