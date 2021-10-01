@@ -3,16 +3,33 @@
     <head>
         <title>Vue</title>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+        <script src="https://unpkg.com/vue-router@2.0.0/dist/vue-router.js"></script>
+        <style>
+            .error{
+                color: red;
+            }
+            .no_error{
+                color: blue;
+            }
+        </style>
     </head>
 
     <body>
         <div id="app">
-            <div v-html="html_content"></div>
+            <div>
+                <h1 :class="{error: p_error, no_error: !p_error}">Texto v-bind</h1>
+                <button @click="cambiarError">Cambiar Color</button>
+            </div>
+
+            <router-link to="/foo">Go to Foo</router-link>
+            <router-link to="/bar">Go to Bar</router-link>
+
+            <router-view></router-view>
+            
             <img :src="src" alt="Vue.js Img">
-            <!-- <p>{{message}}</p> -->
-            <p>{{sum}}</p>
+            <p>{{message}}</p>
             <p>Computed reversed message: "{{ reversedMessage }}"</p>
-            <p>Sum: "{{ calculateSum(sum, 6) }}"</p>
+            <!-- <p>Sum: "{{ calculateSum(sum, 6) }}"</p> -->
         </div>
         <script src="js/app.js"></script>
     </body>
