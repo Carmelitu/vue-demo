@@ -4,7 +4,9 @@ const app = new Vue({
         message: 'Hello Vue',
         sum: 3 + 6,
         isVisible: true,
-        people: ['Paula', 'Lucas', 'Carmelo']
+        people: ['Paula', 'Lucas', 'Carmelo'],
+        html_content: '<h1>Hello Vue!</h1>',
+        src: 'https://www.arsys.es/blog/file/uploads/2020/04/01-vuejs.jpg'
     },
     computed: {
         // a computed getter
